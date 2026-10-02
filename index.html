@@ -1,704 +1,202 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Abrish Fatima — Portfolio</title>
-  <meta name="description" content="Abrish Fatima — AI Automation & Workflow Builder working with n8n, Claude, APIs and FastAPI." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    try {
-      var t = localStorage.getItem("theme");
-      if (t === "auto") t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      if (t && t !== "dark") document.documentElement.setAttribute("data-theme", t);
-    } catch (e) {}
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Abrish Fatima | AI Automation &amp; Workflow Builder</title>
+  <meta name="description" content="Abrish Fatima builds AI automations, n8n workflows and API integrations that run on their own, all self-hosted.">
+  <meta name="theme-color" content="#0b0d14">
+  <meta property="og:title" content="Abrish Fatima | AI Automation &amp; Workflow Builder">
+  <meta property="og:description" content="I build automations that run on their own. Then I make sure they survive errors.">
+  <meta property="og:image" content="reel-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#work">Skip to the work</a>
 
-  <!-- Background layers -->
-
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-orb orb-1" aria-hidden="true"></div>
-  <div class="bg-orb orb-2" aria-hidden="true"></div>
-  <div class="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Navigation -->
-
-  <header class="nav" id="nav">
-    <div class="container nav-inner">
-
-  <a href="#home" class="logo" aria-label="Abrish Fatima — home">
-    <span class="logo-mark">AF</span>
-    <span class="logo-text">Abrish Fatima</span>
-  </a>
-
-  <nav class="nav-links" id="navLinks" aria-label="Primary">
-    <a href="#home" class="nav-link active">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#stack" class="nav-link">Stack</a>
-    <a href="#expertise" class="nav-link">Expertise</a>
-    <a href="#contact" class="nav-link nav-cta">Contact</a>
+<header class="nav">
+  <a href="#top" class="brand"><span class="brand-mark">AF</span><span>Abrish Fatima</span></a>
+  <nav class="nav-links">
+    <a href="#reel">Reel</a>
+    <a href="#receipts">Receipts</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
   </nav>
+  <a href="#contact" class="nav-cta">Contact ↗</a>
+</header>
 
-  <div class="nav-actions">
-    <div class="theme-picker">
-      <button class="theme-btn" id="themeBtn" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" title="Change theme">
-        <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18c1.1 0 1.8-.9 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 004-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg>
-      </button>
-      <div class="theme-menu" id="themeMenu" role="menu" aria-label="Choose a theme">
-          <div class="theme-menu-head"><span class="theme-menu-title">Appearance</span><span class="theme-menu-hint">Saved on this device</span></div>
-          <p class="theme-group-label">Dark</p>
-          <div class="theme-grid">
-            <button class="theme-option" role="menuitemradio" data-theme-value="dark" style="--p-bg:#07080d;--p-text:#e8eaf2;--p-a1:#22d3ee;--p-a2:#a78bfa;--p-line:rgba(255,255,255,.14)"><span class="theme-preview"></span>Midnight</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="graphite" style="--p-bg:#0b0c10;--p-text:#ececf1;--p-a1:#60a5fa;--p-a2:#94a3b8;--p-line:rgba(255,255,255,.14)"><span class="theme-preview"></span>Graphite</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="ocean" style="--p-bg:#050b18;--p-text:#e6edf8;--p-a1:#38bdf8;--p-a2:#6366f1;--p-line:rgba(255,255,255,.14)"><span class="theme-preview"></span>Ocean</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="emerald" style="--p-bg:#050d0a;--p-text:#e6f2ec;--p-a1:#34d399;--p-a2:#a3e635;--p-line:rgba(255,255,255,.14)"><span class="theme-preview"></span>Emerald</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="sunset" style="--p-bg:#0e0709;--p-text:#f6e9ec;--p-a1:#fb923c;--p-a2:#f472b6;--p-line:rgba(255,255,255,.14)"><span class="theme-preview"></span>Sunset</button>
-          </div>
-          <p class="theme-group-label">Light</p>
-          <div class="theme-grid">
-            <button class="theme-option" role="menuitemradio" data-theme-value="light" style="--p-bg:#f5f6fa;--p-text:#0f172a;--p-a1:#0891b2;--p-a2:#7c3aed;--p-line:rgba(15,23,42,.14)"><span class="theme-preview"></span>Daylight</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="sky" style="--p-bg:#f2f6fc;--p-text:#0f172a;--p-a1:#2563eb;--p-a2:#0284c7;--p-line:rgba(15,23,42,.14)"><span class="theme-preview"></span>Sky</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="mint" style="--p-bg:#f2f9f6;--p-text:#0f172a;--p-a1:#059669;--p-a2:#0d9488;--p-line:rgba(15,23,42,.14)"><span class="theme-preview"></span>Mint</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="rose" style="--p-bg:#fcf5f7;--p-text:#0f172a;--p-a1:#db2777;--p-a2:#9333ea;--p-line:rgba(15,23,42,.14)"><span class="theme-preview"></span>Rose</button>
-            <button class="theme-option" role="menuitemradio" data-theme-value="sand" style="--p-bg:#faf7f1;--p-text:#1c1917;--p-a1:#b45309;--p-a2:#c2410c;--p-line:rgba(15,23,42,.14)"><span class="theme-preview"></span>Sand</button>
-          </div>
-          <button class="theme-auto" role="menuitemradio" data-theme-value="auto"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span>Match my device<small>Midnight or Daylight, following your system setting</small></span></button>
-        </div>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-    <span></span><span></span><span></span>
-  </button>
-  </div>
+<main id="top">
 
-</div>
+  <!-- ================= SIGNAL REEL ================= -->
+  <section class="reel" id="reel" aria-label="Signal reel">
+    <div class="monitor" id="monitor">
+      <video id="video" src="abrish-reel.mp4" poster="reel-poster.jpg" muted playsinline preload="auto" aria-label="Abrish Fatima's 66-second intro reel"></video>
 
-  </header>
-
-  <main>
-
-<!-- 1. Hero -->
-<section class="hero" id="home">
-  <div class="container hero-inner">
-
-    <div class="hero-copy">
-
-      <p class="eyebrow reveal">
-        <span class="pulse-dot"></span>
-        Available for automation work
-      </p>
-
-      <h1 class="hero-title reveal">
-        Hi, I'm <span class="gradient-text">Abrish Fatima</span>
-      </h1>
-
-      <p class="hero-role reveal">
-        <span class="mono">&gt;</span>
-        <span id="typed" class="typed">AI Automation &amp; Workflow Builder</span>
-        <span class="caret" aria-hidden="true"></span>
-      </p>
-
-      <p class="hero-sub reveal">
-        I design automated workflows that connect apps, APIs and AI models — turning repetitive, manual processes into systems that run reliably on their own.
-      </p>
-
-      <div class="hero-actions reveal">
-        <a href="#expertise" class="btn btn-primary">
-          View my work <span class="arrow">→</span>
-        </a>
-
-        <a href="#contact" class="btn btn-ghost">
-          Get in touch
-        </a>
+      <!-- loading screen -->
+      <div class="acquire" id="acquire" aria-hidden="true">
+        <span class="hud-mono acq-bars" id="acqBars">▮▯▯▯▯</span>
+        <span class="hud-mono acq-label">ACQUIRING SIGNAL</span>
+        <span class="acq-pct" id="acqPct">000%</span>
       </div>
 
-      <ul class="hero-tags reveal" aria-label="Focus areas">
-        <li>n8n</li>
-        <li>Claude</li>
-        <li>APIs</li>
-        <li>FastAPI</li>
-      </ul>
+      <!-- big play button (shown if autoplay is blocked or when paused) -->
+      <button class="bigplay" id="bigplay" type="button" aria-label="Play reel"><span>▶</span> PLAY</button>
 
-    </div>
-
-    <!-- Animated workflow visual -->
-    <div class="hero-visual reveal" aria-hidden="true">
-
-      <div class="flow-card">
-
-        <div class="flow-header">
-          <span class="dots">
-            <i></i><i></i><i></i>
-          </span>
-
-          <span class="mono flow-title">workflow.run</span>
-
-          <span class="status">
-            <span class="pulse-dot"></span>live
-          </span>
-        </div>
-
-        <div class="flow-body">
-
-          <svg class="flow-lines" viewBox="0 0 400 300" preserveAspectRatio="none">
-
-            <defs>
-              <linearGradient id="lineGrad" x1="0" x2="1">
-                <stop offset="0" stop-color="#22d3ee" />
-                <stop offset="1" stop-color="#a78bfa" />
-              </linearGradient>
-            </defs>
-
-            <path class="flow-path" d="M70 60 C 150 60, 150 150, 200 150" />
-            <path class="flow-path" d="M70 240 C 150 240, 150 150, 200 150" />
-            <path class="flow-path" d="M200 150 C 260 150, 270 70, 330 70" />
-            <path class="flow-path" d="M200 150 C 260 150, 270 230, 330 230" />
-
-          </svg>
-
-          <div class="node n1">
-            <span class="node-icon">⚡</span>
-            <span>Trigger</span>
-          </div>
-
-          <div class="node n2">
-            <span class="node-icon">⇄</span>
-            <span>API</span>
-          </div>
-
-          <div class="node n3 node-ai">
-            <span class="node-icon">✦</span>
-            <span>AI Step</span>
-          </div>
-
-          <div class="node n4">
-            <span class="node-icon">⎇</span>
-            <span>Route</span>
-          </div>
-
-          <div class="node n5">
-            <span class="node-icon">✓</span>
-            <span>Output</span>
-          </div>
-
-        </div>
-
-        <div class="flow-log mono" id="flowLog">
-          <span class="log-line">[ok] trigger received</span>
-        </div>
-
+      <div class="hud hud-top">
+        <span class="rec"><i></i> SIGNAL</span>
+        <span class="hud-mono" id="chapter"><b>01/12</b> ACQUIRING SIGNAL</span>
+        <span class="hud-mono">TC <b id="tc">00:00:00</b></span>
       </div>
 
-    </div>
-
-  </div>
-
-  <a href="#about" class="scroll-hint" aria-label="Scroll to About">
-    <span></span>
-  </a>
-
-</section>
-
-<!-- 2. About -->
-<section class="section" id="about">
-
-  <div class="container about-grid">
-
-    <div class="section-head reveal">
-      <p class="section-kicker mono">01 / About</p>
-      <h2 class="section-title">Building systems that do the busywork.</h2>
-    </div>
-
-    <div class="about-copy reveal">
-
-      <p>
-        I'm Abrish Fatima, and I focus on AI automation and workflow building. My work sits where tools, data and AI models meet — figuring out how information should move between them, and building the workflows that make it happen automatically.
-      </p>
-
-      <p>
-        I work with platforms like <strong>n8n</strong> to orchestrate multi-step processes, with <strong>Claude</strong> to add reasoning and language understanding into those processes, and with <strong>APIs</strong> and <strong>FastAPI</strong> to connect services and build lightweight custom endpoints when an off-the-shelf integration isn't enough.
-      </p>
-
-      <p>
-        I care about workflows that are clear, maintainable and dependable — not just ones that work once in a demo.
-      </p>
-
-      <div class="about-principles">
-
-        <div class="principle">
-          <span class="principle-num mono">→</span>
-          <div>
-            <h3>Clarity first</h3>
-            <p>Understand the process before automating it.</p>
-          </div>
+      <div class="hud hud-bottom">
+        <div class="scrub" id="scrub" role="slider" aria-label="Seek reel" tabindex="0" aria-valuemin="0" aria-valuemax="66" aria-valuenow="0">
+          <div class="scrub-chapters" id="ticks"></div>
+          <i id="bar"></i>
         </div>
-
-        <div class="principle">
-          <span class="principle-num mono">→</span>
-          <div>
-            <h3>Built to last</h3>
-            <p>Error handling, logging and readable structure.</p>
-          </div>
+        <div class="controls">
+          <button class="ctl" id="playBtn" type="button">❚❚ PAUSE</button>
+          <button class="ctl" id="soundBtn" type="button">♪ SOUND OFF</button>
+          <span class="spacer"></span>
+          <button class="ctl" id="replayBtn" type="button">↺ REPLAY</button>
+          <a class="ctl" href="#about">SKIP REEL ↓</a>
         </div>
-
-        <div class="principle">
-          <span class="principle-num mono">→</span>
-          <div>
-            <h3>AI where it helps</h3>
-            <p>Use models deliberately, not by default.</p>
-          </div>
-        </div>
-
       </div>
-
+      <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
     </div>
+    <p class="reel-hint hud-mono">PROGRAMME · TAP THE BAR TO SEEK · SOUND ON FOR MUSIC</p>
+  </section>
 
-  </div>
-
-</section>
-
-<!-- 3. Skills -->
-<section class="section" id="skills">
-
-  <div class="container">
-
-    <div class="section-head center reveal">
-      <p class="section-kicker mono">02 / Skills</p>
-      <h2 class="section-title">Core skills</h2>
-      <p class="section-sub">
-        The areas I focus on when designing and building automation.
-      </p>
-    </div>
-
-    <div class="skills-grid">
-
-      <article class="skill-card reveal">
-        <div class="skill-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2l2.4 5.6L20 10l-5.6 2.4L12 18l-2.4-5.6L4 10l5.6-2.4z"/>
-          </svg>
+  <!-- ================= THIS IS ME ================= -->
+  <section class="section" id="about">
+    <p class="kicker">( this is me )</p>
+    <div class="about">
+      <figure class="halftone">
+        <img src="abrish.jpg" alt="Portrait of Abrish Fatima" width="900" height="1197" loading="lazy">
+        <figcaption class="hud-mono">[ok] output delivered</figcaption>
+      </figure>
+      <div class="about-text">
+        <h1 class="reveal-up">I build <em>automations.</em><br>Then I make them <em>survive.</em></h1>
+        <p class="lede reveal-up">I'm an AI Automation &amp; Workflow Builder in Lahore. I connect apps, APIs and AI models into workflows that take repetitive work off people's plates, with the error handling and retries that keep them running when something breaks.</p>
+        <p class="lede reveal-up">I like owning the whole pipeline: this site, my n8n and my deployment tool all run on a server I set up myself at home.</p>
+        <div class="cta-row reveal-up">
+          <a href="#work" class="btn btn-primary">See the work <span>→</span></a>
+          <a href="#contact" class="btn btn-ghost">Say hello</a>
         </div>
-        <h3>AI Automation</h3>
-        <p>
-          Adding AI steps to workflows for tasks like classifying, summarising, extracting and drafting content.
-        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECEIPTS ================= -->
+  <section class="section" id="receipts">
+    <p class="kicker">( receipts, not claims )</p>
+    <h2 class="reveal-up">Proof it <em>actually runs.</em></h2>
+    <div class="receipts">
+      <div class="receipt reveal-up"><span class="r-num">3</span><span class="r-label">services self-hosted on my own Ubuntu server: this site, Coolify and n8n</span></div>
+      <div class="receipt reveal-up"><span class="r-num">&lt;1<small>min</small></span><span class="r-label">from <code>git push</code> to live, deployed automatically by a GitHub webhook</span></div>
+      <div class="receipt reveal-up"><span class="r-num">24/7</span><span class="r-label">served securely through a Cloudflare Tunnel, no open router ports</span></div>
+      <div class="receipt reveal-up"><span class="r-num">0</span><span class="r-label">paid hosting. Every piece of this stack runs from home</span></div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <p class="kicker">( three hats, one builder )</p>
+    <h2 class="reveal-up">What I can take <em>off your plate.</em></h2>
+    <div class="cards">
+      <article class="card reveal-up">
+        <span class="card-num hud-mono">HAT 01</span>
+        <h3>Workflow automation</h3>
+        <p>n8n workflows that move data between your apps, send the follow-ups, update the sheets and alert the right person, on a schedule or the moment something happens.</p>
+        <ul class="tags"><li>n8n</li><li>Webhooks</li><li>Schedules</li></ul>
       </article>
-
-      <article class="skill-card reveal">
-        <div class="skill-icon">
-          <svg viewBox="0 0 24 24">
-            <circle cx="5" cy="12" r="2.5"/>
-            <circle cx="19" cy="6" r="2.5"/>
-            <circle cx="19" cy="18" r="2.5"/>
-            <path d="M7.5 12h4l5-6M11.5 12l5 6"/>
-          </svg>
-        </div>
-        <h3>Workflow Automation</h3>
-        <p>
-          Mapping manual processes into triggered, multi-step flows with branching logic and clear hand-offs.
-        </p>
+      <article class="card reveal-up">
+        <span class="card-num hud-mono">HAT 02</span>
+        <h3>AI assistants &amp; agents</h3>
+        <p>AI steps that read, sort, summarise and draft: classifying leads, extracting data from documents, replying from your own content.</p>
+        <ul class="tags"><li>Claude</li><li>Prompting</li><li>LLM workflows</li></ul>
       </article>
-
-      <article class="skill-card reveal">
-        <div class="skill-icon">
-          <svg viewBox="0 0 24 24">
-            <rect x="3" y="4" width="7" height="7" rx="1.5"/>
-            <rect x="14" y="13" width="7" height="7" rx="1.5"/>
-            <path d="M10 7.5h4a2 2 0 012 2V13"/>
-          </svg>
-        </div>
-        <h3>n8n Workflows</h3>
-        <p>
-          Building and structuring n8n workflows — nodes, triggers, expressions, sub-workflows and error paths.
-        </p>
+      <article class="card reveal-up">
+        <span class="card-num hud-mono">HAT 03</span>
+        <h3>APIs &amp; integrations</h3>
+        <p>Small FastAPI services that make tools talk to each other, with retries, logging and alerts so failures don't go unnoticed.</p>
+        <ul class="tags"><li>FastAPI</li><li>REST APIs</li><li>Python</li></ul>
       </article>
-
-      <article class="skill-card reveal">
-        <div class="skill-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h10M4 18h13"/>
-            <circle cx="19" cy="15" r="3"/>
-          </svg>
-        </div>
-        <h3>Prompt Design with Claude</h3>
-        <p>
-          Writing structured prompts and outputs so AI steps return consistent, usable results inside a workflow.
-        </p>
-      </article>
-
-      <article class="skill-card reveal">
-        <div class="skill-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/>
-          </svg>
-        </div>
-        <h3>API Integration</h3>
-        <p>
-          Connecting services through REST APIs, webhooks, authentication and JSON data transformation.
-        </p>
-      </article>
-
-      <article class="skill-card reveal">
-        <div class="skill-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M13 2L4 14h7l-1 8 9-12h-7z"/>
-          </svg>
-        </div>
-        <h3>FastAPI Endpoints</h3>
-        <p>
-          Creating lightweight Python APIs to handle custom logic that workflows can call when needed.
-        </p>
-      </article>
-
     </div>
+  </section>
 
-  </div>
-
-</section>
-
-<!-- 4. What I Work With -->
-<section class="section" id="stack">
-
-  <div class="container">
-
-    <div class="section-head center reveal">
-      <p class="section-kicker mono">03 / Stack</p>
-      <h2 class="section-title">What I work with</h2>
-      <p class="section-sub">
-        Tools and technologies that make up my day-to-day toolkit.
-      </p>
+  <!-- ================= WORK ================= -->
+  <section class="section" id="work">
+    <p class="kicker">( things I've actually built )</p>
+    <h2 class="reveal-up">The <em>work.</em></h2>
+    <div class="work">
+      <article class="work-item reveal-up">
+        <span class="hud-mono w-idx">01</span>
+        <div class="w-main">
+          <h3>Home server, from zero</h3>
+          <p>Turned a small desktop PC into a 24/7 server: Ubuntu, Coolify for deployments, sleep disabled, everything restarting on its own after a reboot.</p>
+        </div>
+        <ul class="tags"><li>Ubuntu</li><li>Coolify</li><li>Docker</li></ul>
+      </article>
+      <article class="work-item reveal-up">
+        <span class="hud-mono w-idx">02</span>
+        <div class="w-main">
+          <h3>Push-to-deploy pipeline</h3>
+          <p>A GitHub webhook tells Coolify to rebuild the moment I push, so this site updates itself in under a minute with no manual steps.</p>
+        </div>
+        <ul class="tags"><li>GitHub</li><li>Webhooks</li><li>nginx</li></ul>
+      </article>
+      <article class="work-item reveal-up">
+        <span class="hud-mono w-idx">03</span>
+        <div class="w-main">
+          <h3>Private n8n + secure tunnel</h3>
+          <p>My own n8n instance with a PostgreSQL database on its own subdomain, published through a Cloudflare Tunnel with HTTPS everywhere.</p>
+        </div>
+        <ul class="tags"><li>n8n</li><li>PostgreSQL</li><li>Cloudflare</li></ul>
+      </article>
     </div>
+  </section>
 
-    <div class="stack-grid">
-
-      <div class="stack-group reveal">
-        <h3 class="stack-label mono">Automation</h3>
-        <ul class="chips">
-          <li class="chip">n8n</li>
-          <li class="chip">Webhooks</li>
-          <li class="chip">Scheduled triggers</li>
-          <li class="chip">Workflow logic</li>
-        </ul>
-      </div>
-
-      <div class="stack-group reveal">
-        <h3 class="stack-label mono">AI</h3>
-        <ul class="chips">
-          <li class="chip">Claude</li>
-          <li class="chip">Prompt engineering</li>
-          <li class="chip">Structured outputs</li>
-          <li class="chip">LLM APIs</li>
-        </ul>
-      </div>
-
-      <div class="stack-group reveal">
-        <h3 class="stack-label mono">Backend &amp; APIs</h3>
-        <ul class="chips">
-          <li class="chip">FastAPI</li>
-          <li class="chip">Python</li>
-          <li class="chip">REST APIs</li>
-          <li class="chip">JSON</li>
-        </ul>
-      </div>
-
-      <div class="stack-group reveal">
-        <h3 class="stack-label mono">Foundations</h3>
-        <ul class="chips">
-          <li class="chip">HTTP &amp; auth</li>
-          <li class="chip">Data mapping</li>
-          <li class="chip">Git</li>
-          <li class="chip">Documentation</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="marquee reveal" aria-hidden="true">
-
+  <!-- ================= STACK ================= -->
+  <section class="section" id="stack">
+    <p class="kicker">( the toolbox )</p>
+    <div class="marquee" aria-label="Tools I use">
       <div class="marquee-track">
-        <span>n8n</span><span>✦</span>
-        <span>Claude</span><span>✦</span>
-        <span>FastAPI</span><span>✦</span>
-        <span>REST APIs</span><span>✦</span>
-        <span>Webhooks</span><span>✦</span>
-        <span>Python</span><span>✦</span>
-        <span>Workflow Automation</span><span>✦</span>
-
-        <span>n8n</span><span>✦</span>
-        <span>Claude</span><span>✦</span>
-        <span>FastAPI</span><span>✦</span>
-        <span>REST APIs</span><span>✦</span>
-        <span>Webhooks</span><span>✦</span>
-        <span>Python</span><span>✦</span>
-        <span>Workflow Automation</span><span>✦</span>
+        <span>n8n</span><span>Claude</span><span>FastAPI</span><span>Python</span><span>REST APIs</span><span>Webhooks</span><span>GitHub</span><span>Coolify</span><span>Docker</span><span>Cloudflare</span><span>Ubuntu</span><span>PostgreSQL</span>
+        <span aria-hidden="true">n8n</span><span aria-hidden="true">Claude</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">Python</span><span aria-hidden="true">REST APIs</span><span aria-hidden="true">Webhooks</span><span aria-hidden="true">GitHub</span><span aria-hidden="true">Coolify</span><span aria-hidden="true">Docker</span><span aria-hidden="true">Cloudflare</span><span aria-hidden="true">Ubuntu</span><span aria-hidden="true">PostgreSQL</span>
       </div>
-
     </div>
+  </section>
 
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact">
+    <p class="kicker">( say hello )</p>
+    <h2 class="reveal-up">Got a task that should <em>run itself?</em></h2>
+    <p class="lede reveal-up">Tell me what you do by hand every week. I'll tell you what can be automated.</p>
+    <div class="contact-row reveal-up">
+      <a class="btn btn-primary btn-lg" href="mailto:abrishfatima111225@gmail.com">abrishfatima111225@gmail.com <span>↗</span></a>
+      <a class="btn btn-ghost btn-lg" href="https://github.com/abrishfatima111225-ui" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="audit">
+    <p class="kicker">( the audit )</p>
+    <p class="audit-name">Abrish Fatima</p>
+    <p class="hud-mono">AI automation · n8n · Claude · APIs · FastAPI · self-hosted in Lahore</p>
   </div>
-
-</section>
-
-<!-- 5. Work / Expertise -->
-<section class="section" id="expertise">
-
-  <div class="container">
-
-    <div class="section-head center reveal">
-      <p class="section-kicker mono">04 / Expertise</p>
-      <h2 class="section-title">Types of work I do</h2>
-      <p class="section-sub">
-        General areas of automation I build for. Specific project details are kept confidential.
-      </p>
-    </div>
-
-    <div class="expertise-grid">
-
-      <article class="exp-card reveal">
-        <div class="exp-top">
-          <span class="exp-num mono">01</span>
-          <span class="exp-tag mono">AI + Workflow</span>
-        </div>
-
-        <h3>AI-assisted content &amp; data processing</h3>
-
-        <p>
-          Workflows that take incoming text or data, pass it through an AI step to summarise, categorise or extract key fields, and send clean results onward.
-        </p>
-
-        <ul class="exp-list">
-          <li>Structured AI outputs</li>
-          <li>Validation before hand-off</li>
-        </ul>
-      </article>
-
-      <article class="exp-card reveal">
-        <div class="exp-top">
-          <span class="exp-num mono">02</span>
-          <span class="exp-tag mono">Integration</span>
-        </div>
-
-        <h3>App-to-app integrations</h3>
-
-        <p>
-          Connecting separate tools through APIs and webhooks so data moves between them automatically instead of being copied by hand.
-        </p>
-
-        <ul class="exp-list">
-          <li>Webhooks &amp; REST APIs</li>
-          <li>Data mapping &amp; transformation</li>
-        </ul>
-      </article>
-
-      <article class="exp-card reveal">
-        <div class="exp-top">
-          <span class="exp-num mono">03</span>
-          <span class="exp-tag mono">Operations</span>
-        </div>
-
-        <h3>Process &amp; task automation</h3>
-
-        <p>
-          Turning repetitive routines — notifications, routing, scheduled reports, follow-ups — into reliable triggered workflows.
-        </p>
-
-        <ul class="exp-list">
-          <li>Scheduling &amp; triggers</li>
-          <li>Conditional routing</li>
-        </ul>
-      </article>
-
-      <article class="exp-card reveal">
-        <div class="exp-top">
-          <span class="exp-num mono">04</span>
-          <span class="exp-tag mono">Backend</span>
-        </div>
-
-        <h3>Custom API endpoints</h3>
-
-        <p>
-          Small FastAPI services that handle logic too specific for built-in nodes, exposing clean endpoints a workflow can call.
-        </p>
-
-        <ul class="exp-list">
-          <li>Python &amp; FastAPI</li>
-          <li>Request validation</li>
-        </ul>
-      </article>
-
-    </div>
-
-    <!-- Process -->
-    <div class="process reveal">
-
-      <h3 class="process-title">How I approach a workflow</h3>
-
-      <ol class="process-steps">
-
-        <li>
-          <span class="step-num mono">01</span>
-          <h4>Understand</h4>
-          <p>Map the current process and where time is lost.</p>
-        </li>
-
-        <li>
-          <span class="step-num mono">02</span>
-          <h4>Design</h4>
-          <p>Plan triggers, steps, data flow and AI touchpoints.</p>
-        </li>
-
-        <li>
-          <span class="step-num mono">03</span>
-          <h4>Build</h4>
-          <p>Implement, connect APIs and handle edge cases.</p>
-        </li>
-
-        <li>
-          <span class="step-num mono">04</span>
-          <h4>Refine</h4>
-          <p>Test, document and improve reliability.</p>
-        </li>
-
-      </ol>
-
-    </div>
-
+  <div class="footer-links">
+    <a href="mailto:abrishfatima111225@gmail.com">Email ↗</a>
+    <a href="https://github.com/abrishfatima111225-ui" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="#reel">Replay the reel ↑</a>
   </div>
+  <p class="hud-mono footer-note">© <span id="yr">2026</span> · served from a home server · deployed from GitHub</p>
+</footer>
 
-</section>
-
-<!-- 6. Contact -->
-<section class="section" id="contact">
-
-  <div class="container">
-
-    <div class="contact-card reveal">
-
-      <div class="contact-copy">
-
-        <p class="section-kicker mono">05 / Contact</p>
-
-        <h2 class="section-title">Let's automate something.</h2>
-
-        <p class="section-sub left">
-          Have a process that feels repetitive, or an idea for connecting your tools with AI? Send a message and I'll get back to you.
-        </p>
-
-        <div class="contact-links">
-
-          <!-- Email -->
-          <a href="mailto:abrishfatima111225@gmail.com" class="contact-link" id="emailLink">
-            <span class="cl-icon">✉</span>
-            <span>
-              <small>Email</small>
-              <span id="emailText">abrishfatima111225@gmail.com</span>
-            </span>
-          </a>
-
-          <!-- LinkedIn - add profile later -->
-          <a href="#" class="contact-link" target="_blank" rel="noopener">
-            <span class="cl-icon">in</span>
-            <span>
-              <small>LinkedIn</small>
-              LinkedIn profile coming soon
-            </span>
-          </a>
-
-          <!-- GitHub -->
-          <a href="https://github.com/abrishfatima111225-ui" class="contact-link" target="_blank" rel="noopener">
-            <span class="cl-icon">&lt;/&gt;</span>
-            <span>
-              <small>GitHub</small>
-              abrishfatima111225-ui
-            </span>
-          </a>
-
-        </div>
-
-      </div>
-
-      <form class="contact-form" id="contactForm" novalidate>
-        <!-- Hidden spam trap: leave empty -->
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0" />
-
-        <div class="field">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            required
-          />
-        </div>
-
-        <div class="field">
-  <label for="email">Email</label>
-  <input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="you@example.com"
-    required
-  />
-</div>
-
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Tell me about the workflow you have in mind…"
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">
-          Send message <span class="arrow">→</span>
-        </button>
-
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-  </main>
-
-  <footer class="footer">
-
-<div class="container footer-inner">
-
-  <p>
-    © <span id="year"></span> Abrish Fatima. AI Automation &amp; Workflow Builder.
-  </p>
-
-  <a href="#home" class="back-top">
-    Back to top ↑
-  </a>
-
-</div>
-
-  </footer>
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>
-<!-- auto-deploy test -->
